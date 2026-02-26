@@ -1,0 +1,296 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+
+/* ------------------------------------------------------ Misc ------------------------------------------------------ */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Outfit", sans-serif;
+}
+
+:root {
+    --text: #090b12;
+    --background: #f2f4f9;
+    --primary: #4269c0;
+    --secondary: #9bacdd;
+    --accent: #758ed5;
+    --bold: 700;
+    --semibold: 600;
+    --medium: 500;
+    --regular: 400;
+    --light: 300;
+    --extralight: 200;
+}
+
+body {
+    background-color: var(--background);
+    /* padding: 0 300px; */
+}
+
+/* ------------------------------------------------------ Navbar ------------------------------------------------------ */
+
+.navbar-container {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding: 20px 230px 0 230px;
+    position: fixed;
+    z-index: 10;
+}
+
+.navbar {
+    background-color: #ebedf3cb;
+    backdrop-filter: blur(7px);
+    border-bottom: solid 4px #fbfcff;
+    height: 80px;
+    width: 100%;
+    border-radius: 25px;
+    box-shadow: #0000001c 0px 4px 25px;
+    display: flex;
+    padding: 0 25px;
+    justify-content: space-between;
+}
+
+.logoSection {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 15px;
+}
+
+.jmssLogo {
+    width: auto;
+    height: 45px;
+}
+
+.logoSection p {
+    color: var(--text);
+    font-size: 22px;
+}
+
+.navLinks {
+    display: flex;
+    align-items: center;
+    gap: 35px;
+}
+
+.navLinks a {
+    color: var(--text);
+    font-size: 20px;
+    text-decoration: none;
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+.navLinks a::after {
+    content: "";
+    position: absolute;
+    width: calc(100% - 10px);
+    height: 1px;
+    bottom: -8px;
+    background-color: #090b12;
+    border-radius: 1px;
+    opacity: 0;
+    transition: all 0.3s cubic-bezier(.47, .01, .08, .97);
+}
+
+.navLinks a:hover::after {
+    bottom: -2px;
+    opacity: 30%;
+    width: 100%;
+}
+
+/* ------------------------------------------------------ Hero Section ------------------------------------------------------ */
+
+.heroSection {
+    background-color: #e8ecf6;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    height: 740px;
+    /* z-index: -2; */
+    overflow: hidden;
+    /* height: 1000px; */
+}
+
+/* ------------------- Background Video ------------------- */
+
+.videoContainer {
+    position: relative;
+    width: 80%;
+    /* z-index: -1; */
+    height: auto;
+    top: 0;
+    display: flex;
+}
+
+.videoContainer::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, rgba(232, 236, 246, 1) 0%, rgba(232, 236, 246, 0) 100%);
+}
+
+.blankSpace {
+    width: 20%;
+    height: 100%;
+    position: relative;
+}
+
+.videoContainer video {
+    width: 100%;
+    object-fit: cover;
+    height: auto;
+    filter: grayscale(1);
+}
+
+/* ------------------- Hero Content ------------------- */
+
+.heroContent {
+    width: 100%;
+    /* height: 100%; */
+    padding: 0 230px;
+    position: absolute;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    justify-content: center;
+    /* background: #E8ECF6; */
+    /* background: linear-gradient(90deg, rgba(232, 236, 246, 1) 44%, rgba(232, 236, 246, 1) 44%, rgba(232, 236, 246, 0) 100%); */
+    /* text-shadow: 0 3px 10px #07090f1c; */
+    padding-top: 60px;
+}
+
+
+
+.heroContent h1, .heroContent h2{
+    color: var(--primary);
+}
+
+.heroContent h3 {
+    color: #1B3266;
+    font-size: 35px;
+    font-weight: var(--medium);
+}
+
+.heroContent h1 {
+    font-size: 55px;
+    font-weight: var(--bold);
+    line-height: 85%;
+}
+
+.heroContent h2 {
+    font-size: 46px;
+    font-weight: var(--semibold);
+}
+
+.heroContent h3 span {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.heroContent h3 span img {
+    width: 45px;
+    height: auto;
+}
+
+.heroContent h4 {
+    font-weight: var(--extralight);
+    font-size: 25px;
+    color: var(--text);
+}
+
+
+.heroTransportIcons {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-top: 60px;
+}
+
+.heroTransportIcons img {
+    height: 50px;
+    width: auto;
+}
+
+/* ------------------------------------------------------ Section 1 ------------------------------------------------------ */
+
+.section1, .section2 {
+    padding: 60px 230px;
+    width: 100%;
+}
+
+.section2 {
+    background-color: #E8ECF6;
+}
+
+.subheader {
+    color: var(--primary);
+    font-size: 45px;
+    text-align: center;
+    font-weight: var(--medium);
+    margin-bottom: 30px;
+}
+
+.linkGrid {
+    display: grid;
+    width: 100%;
+    grid-template-columns: auto auto auto;
+    /* height: 20px; */
+    gap: 35px;
+}
+
+.linkCardCont {
+    /* background-color: var(--background); */
+    border-radius: 25px;
+    padding: 50px 40px;
+    box-shadow: 0 4px 30px #00000005;
+}
+
+.linkCardCont.one {
+    background-color: #0072ce;
+}
+
+.linkCardCont.two {
+    background-color: #7f0d82;
+}
+
+.linkCardCont.three {
+    background-color: #f8fafd;
+}
+
+
+/* ------------------------------------------------------ Section 2 ------------------------------------------------------ */
+
+.keyGrid {
+    display: grid;
+    width: 100%;
+    grid-template-columns: auto auto auto;
+    /* height: 20px; */
+    gap: 35px;
+}
+
+.keyItem {
+    background-color: var(--background);
+    border-radius: 25px;
+    padding: 50px 40px;
+    box-shadow: 0 4px 30px #00000005;
+}
+
+.keyItem h1 {
+    color: var(--primary);
+    font-size: 44px;
+    font-weight: var(--semibold);
+    margin-bottom: 10px;
+}
+
+.keyItem p {
+    color: var(--text);
+    font-size: 27px;
+    font-weight: var(--light);
+}
