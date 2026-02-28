@@ -121,7 +121,7 @@ body {
     height: auto;
     top: 0;
     display: flex;
-    background-image: url(./media/preload-bg-image.png);
+    background-image: url(./media/preload-bg-image.jpg);
     background-size: cover;
     background-position: right;
 }
@@ -144,7 +144,7 @@ body {
     width: 100%;
     object-fit: cover;
     height: auto;
-    /* filter: grayscale(1); */
+    filter: grayscale(0.3);
 }
 
 /* ------------------- Hero Content ------------------- */
