@@ -5,8 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
+    <link rel="stylesheet" href="/global.css">
     <link rel="stylesheet" href="./sources/style.css">
-    <link rel="shortcut icon" href="./sources/media/favicon.png" type="image/x-icon">
+    <link rel="shortcut icon" href="/sources/media/favicon.png" type="image/x-icon">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.css"
         integrity="sha512-NhLySQDkiKSKnT+R795uaHWRQ7D3VuIvgeOLCK8cWq4w5fq4sWF90gj8eURpTqn/f1mFzqClpOz8JPlgVTLfFw=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -20,10 +21,10 @@
                 <p>S1 AT1 <span style="opacity: 0.5;">Interactive Data Visualisation</span></p>
             </div>
             <div class="navLinks">
-                <a href="#">Home</a>
-                <a href="#">Metro Transport</a>
-                <a href="#">Regional Transport</a>
-                <a href="#">Comparisons</a>
+                <a href="/">Home</a>
+                <a href="/metro/">Metro Transport</a>
+                <a href="/regional/">Regional Transport</a>
+                <a href="/comparison/">Comparisons</a>
             </div>
         </div>
     </div>
@@ -32,19 +33,19 @@
 
         </div>
         <div class="videoContainer">
-            <video src="./sources/media/ptvblur2.mp4" loop autoplay muted playsinline></video>
+            <video src="/sources/media/ptvblur2.mp4" loop autoplay muted playsinline></video>
         </div>
         <div class="heroContent">
-            <h3><span><img src="./sources/media/investigation-icon.svg" alt="">Investigaton</span></h3>
+            <h3><span><img src="/sources/media/investigation-icon.svg">Investigaton</span></h3>
             <h1 style="margin-top: 25px;">Public Transport usage in Victoria</h1>
             <h2 style="opacity: 60%; margin-bottom: 30px;">from 2018 - 2024</h2>
             <h4>Led by Shriman, Jap and Jehan</h4>
             <div class="heroTransportIcons">
-                <img src="./sources/media/TransportIcons/train.png">
-                <img src="./sources/media/TransportIcons/tram.png">
-                <img src="./sources/media/TransportIcons/bus.png">
-                <img src="./sources/media/TransportIcons/vline.png">
-                <img src="./sources/media/TransportIcons/coach.png">
+                <img src="/sources/media/TransportIcons/train.png">
+                <img src="/sources/media/TransportIcons/tram.png">
+                <img src="/sources/media/TransportIcons/bus.png">
+                <img src="/sources/media/TransportIcons/vline.png">
+                <img src="/sources/media/TransportIcons/coach.png">
             </div>
         </div>
     </div>
@@ -66,7 +67,7 @@
                             <h2>Metropolitan</h2>
                             <h3>Transport Data Trends</h3>
                         </div>
-                        <a href="#" class="cardLinkBtn">
+                        <a href="/metro/" class="cardLinkBtn">
                             <i class="fa-solid fa-arrow-up-right-from-square metro"></i>
                         </a>
                     </div>
@@ -85,7 +86,7 @@
                             <h2>Regional</h2>
                             <h3>Transport Data Trends</h3>
                         </div>
-                        <a href="#" class="cardLinkBtn">
+                        <a href="/regional/" class="cardLinkBtn">
                             <i class="fa-solid fa-arrow-up-right-from-square regional"></i>
                         </a>
                     </div>
@@ -106,7 +107,7 @@
                             <h2>Metro vs Regional</h2>
                             <h3>Transport Data Trends</h3>
                         </div>
-                        <a href="#" class="cardLinkBtn compare">
+                        <a href="/comparison/" class="cardLinkBtn compare">
                             <i class="fa-solid fa-arrow-up-right-from-square"></i>
                         </a>
                     </div>
@@ -134,5 +135,7 @@
         </div>
     </div>
 </body>
+<script src="/global.js" defer></script>
+<script src="./sources/app.js" defer></script>
 
 </html>
