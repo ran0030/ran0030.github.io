@@ -11,7 +11,8 @@
 
 :root {
     --text: #090b12;
-    --text-dark-blue: #1a377a; /* 1B3266 */
+    --text-dark-blue: #1a377a;
+    /* 1B3266 */
     --background: #f2f4f9;
     --primary: #4269c0;
     --secondary: #9bacdd;
@@ -25,6 +26,7 @@
     --border-radius: 25px;
     --gap: 35px;
     --text-image-gap: 60px;
+    --global-width: 1400px;
 }
 
 body {
@@ -34,7 +36,7 @@ body {
 /* ------------------------------------------------------ Text Styles ------------------------------------------------------ */
 
 .section {
-    width: 1400px;
+    width: var(--global-width);
 }
 
 .subheader {
@@ -70,7 +72,8 @@ body {
     margin-bottom: 15px;
 }
 
-.body-text, .body-text ul li{
+.body-text,
+.body-text ul li {
     color: var(--text);
     font-weight: var(--light);
     font-size: 22px;
@@ -83,6 +86,14 @@ body {
 
 .body-text ul li {
     margin-left: 2em;
+}
+
+.body-text strong {
+    display: inline-block;
+    margin-bottom: 6px;
+    font-size: 25px;
+    font-weight: var(--medium);
+    color: var(--text-dark-blue);
 }
 
 .sectioncontainer {
@@ -132,7 +143,7 @@ div.img-s::before {
     background-position: center;
     transform: scale(1);
     z-index: 2;
-    transition: all 0.6s cubic-bezier(.17,.01,.11,.88);
+    transition: all 0.6s cubic-bezier(.17, .01, .11, .88);
     opacity: 0.9;
     filter: saturate(0.5);
 }
@@ -142,13 +153,13 @@ div.img-s::after {
     position: absolute;
     width: 100%;
     height: 100%;
-    background: linear-gradient(0deg,#f8fafdc0 0%, #e8ecf600 64%);
+    background: linear-gradient(0deg, #f8fafdc0 0%, #e8ecf600 64%);
     z-index: 3;
-    transition: all 0.6s cubic-bezier(.17,.01,.11,.88);
+    transition: all 0.6s cubic-bezier(.17, .01, .11, .88);
 }
 
 div.img-s.i-dark::after {
-    background: linear-gradient(0deg,#d4daebc0 0%, #e8ecf600 64%);
+    background: linear-gradient(0deg, #d4daebc0 0%, #e8ecf600 64%);
 }
 
 div.img-s:hover::before {
@@ -177,7 +188,7 @@ div.img-s:hover::after {
     background-color: #f2f4f9c7;
     backdrop-filter: blur(15px);
     height: 80px;
-    width: 1400px;
+    width: var(--global-width);
     border-radius: var(--border-radius);
     box-shadow: #00000025 0px 4px 25px;
     display: flex;
@@ -212,18 +223,20 @@ div.img-s:hover::after {
 .navLinks {
     display: flex;
     align-items: center;
-    gap: 35px;
+    gap: var(--gap);
 }
 
 .navLinks a {
     color: var(--text-dark-blue);
-    font-size: 20px;
+    font-size: 22px;
     text-decoration: none;
     position: relative;
     display: flex;
     justify-content: center;
     font-weight: var(--regular);
     transition: all 0.1s cubic-bezier(.47, .01, .08, .97);
+    text-align: center;
+    line-height: 1;
 }
 
 .navLinks a:active {
@@ -269,7 +282,7 @@ div.img-s:hover::after {
     display: flex;
     background-image: url(/sources/media/preload-bg-image.jpg);
     background-size: cover;
-    background-position: right;
+    background-position: bottom right;
     filter: grayscale(0.3);
 }
 
@@ -306,7 +319,7 @@ div.img-s:hover::after {
 /* ------------------- Hero Content ------------------- */
 
 .heroContent {
-    width: 1400px;
+    width: var(--global-width);
     position: absolute;
     height: 100%;
     display: flex;
@@ -315,7 +328,8 @@ div.img-s:hover::after {
     padding-top: 60px;
 }
 
-.heroContent h1, .heroContent h2{
+.heroContent h1,
+.heroContent h2 {
     color: var(--primary);
 }
 
@@ -369,4 +383,60 @@ div.img-s:hover::after {
 .heroTransportIcons img {
     height: 50px;
     width: auto;
+}
+
+/* ------------------------------------------------------ Responsiveness ------------------------------------------------------ */
+
+@media (max-width: 1460px) {
+    :root {
+        --global-width: 1200px;
+    }
+}
+
+@media (max-width: 1270px) {
+
+    :root {
+        --global-width: 1000px;
+    }
+
+    .navLinks {
+        gap: 30px;
+    }
+
+    .navLinks a,
+    .logoSection p {
+        font-size: 18px;
+    }
+
+    .logoSection {
+        gap: 10px;
+    }
+
+    .jmssLogo {
+        height: 40px;
+    }
+}
+
+.size-alert {
+    display: none;
+}
+
+@media (max-width: 1040px) {
+    .size-alert {
+        position: fixed;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 0 30px;
+        justify-content: center;
+        font-size: 20px;
+        width: 100%;
+        height: 100vh;
+        text-align: center;
+        background-color: #e01111c4;
+        backdrop-filter: blur(20px);
+        color: #fff;
+        z-index: 100;
+        text-shadow: 0 3px 15px #00000057;
+    }
 }

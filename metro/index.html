@@ -11,6 +11,22 @@
 </head>
 
 <body>
+    <div class="size-alert">
+        <strong>Website is not supported at your resolution!</strong>
+
+        <br>
+
+        Please use a device with resolution greater than 1000 pixels, preferrably a 1920x1080 screen for the best
+        user experience.
+
+        <br><br>
+
+        You can also zoom out until the website can be viewed.
+
+        <br><br>
+
+        If you are on phone, zoom out and rotate the screen until this popup disappears.
+    </div>
     <div class="navbar-container">
         <div class="navbar">
             <div class="logoSection" onclick="homeLink()">
@@ -30,7 +46,7 @@
         <div class="blankSpace">
 
         </div>
-        <div class="videoContainer" id="metro-bg" >
+        <div class="videoContainer" id="metro-bg">
             <video src="#" loop autoplay muted playsinline></video>
         </div>
         <div class="heroContent">
@@ -43,6 +59,88 @@
                 <img src="/sources/media/TransportIcons/train.png">
                 <img src="/sources/media/TransportIcons/tram.png">
                 <img src="/sources/media/TransportIcons/bus.png">
+            </div>
+        </div>
+    </div>
+
+    <div class="sectioncontainer msc1">
+        <div class="section ms1">
+            <div class="s-text-container">
+                <h3 class="pre-subheader">SECTION 1:</h3>
+                <div class="subheader th">Overview of Metropolitan Transport</div>
+                <div class="body-text">
+                    <strong>Intro to the Data</strong>
+                    <br>
+                    This section analyses total metropolitan public transport patronage in Victoria from 2018 to 2024.
+                    The data includes trains, trams and buses operating within metropolitan Melbourne. By looking at
+                    total yearly patronage, we can clearly see how usage patterns changed before, during and after
+                    COVID-19.
+                </div>
+            </div>
+            <div class="graph-container">
+                <img src="./media/s1-total-metro-line-graph.svg">
+            </div>
+            <div class="s-text-container">
+                <div class="body-text">
+                    <strong>Analysis</strong>
+                    <br>
+                    From 2018 to 2019, metropolitan patronage was relatively stable, showing consistent high usage
+                    across Melbourne's transport network. However, in 2020 there was a dramatic decline due to COVID-19
+                    restrictions, lockdowns and the shift to remote work and online learning.
+                    <br><br>
+                    The steepness of the decline between 2019 and 2020 highlights how dependent metropolitan transport
+                    is on daily commuting patterns.
+                    <br><br>
+                    From 2022 onwards, usage began to recover as restrictions eased and people returned to offices,
+                    schools and public spaces. While there has been strong growth between 2022 and 2024, total
+                    metropolitan patronage has not yet fully returned to pre-pandemic levels. This suggests that
+                    long-term behavioural changes, such as hybrid work and flexible schooling, may still be affecting
+                    public transport demand, as well as delays from onging transport projects, such as the Metro Tunnel
+                    Project,
+                    Suburban Rail Loop and Level Crossing Removal, which were the main causes for train delays in the
+                    past few years.
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="sectioncontainer msc2 sc-dark">
+        <div class="section ms2">
+            <div class="s-text-container">
+                <h3 class="pre-subheader">SECTION 2:</h3>
+                <div class="subheader th">Metro Mode Breakdown (Train vs Tram vs Bus)</div>
+            </div>
+            <div class="graph-text-container">
+                <img src="./media/s2-mode-metro-line-graph.svg">
+                <div class="body-text">
+                    <strong>Intro to the Data</strong>
+                    <br>
+                    This graph compares total yearly patronage for metropolitan trains, trams and buses from 2018 to
+                    2024. Breaking the data down by mode makes it easier to see which type of transport was most
+                    affected and how each recovered over time.
+                </div>
+            </div>
+            <div class="s-text-container">
+                <div class="body-text">
+                    <strong>Analysis</strong>
+                    <br>
+                    Before 2020, trains clearly had the highest patronage out of the three modes, followed by trams,
+                    with buses having the lowest total usage. This makes sense because trains are the main way
+                    people commute into the CBD from outer suburbs, but could also hint an underestimation of bus
+                    patronage
+                    due to fare evading being a common occurence.
+                    <br><br>
+                    During 2020 and 2021, all three modes experienced a sharp decline. However, trains showed the
+                    largest drop overall, which suggests they were the most affected by lockdowns and remote work.
+                    Since trains are heavily used for daily office commuting, the shift to working from home likely
+                    reduced demand significantly.
+                    <br><br>
+                    Trams also experienced a major decline, particularly due to reduced activity in central
+                    Melbourne during lockdown periods.
+                    <br><br>
+                    By 2024, all three modes show clear recovery trends, but they all still remain below their
+                    pre-pandemic peak, indicating that commuting behaviour may have permanently shifted.
+                </div>
             </div>
         </div>
     </div>
