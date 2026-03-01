@@ -90,6 +90,7 @@ body {
 
 .body-text strong {
     display: inline-block;
+    width: 100%;
     margin-bottom: 6px;
     font-size: 25px;
     font-weight: var(--medium);
@@ -315,6 +316,7 @@ div.img-s:hover::after {
     width: 100%;
     object-fit: cover;
     height: auto;
+    pointer-events: none;
 }
 
 /* ------------------- Hero Content ------------------- */
@@ -384,6 +386,47 @@ div.img-s:hover::after {
 .heroTransportIcons img {
     height: 50px;
     width: auto;
+}
+
+/* ------------------------------------------------------ Footer ------------------------------------------------------ */
+
+.footer {
+    background: #e0e4ee;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 0;
+}
+
+.footer-content {
+    width: var(--global-width);
+}
+
+.inner-fot-cont {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.footer-content div.fot p {
+    font-size: 15px;
+    color: var(--text);
+    margin-bottom: 10px;
+    line-height: 0.9;
+    font-weight: var(--light);
+}
+
+.footer-content div.fot.end p {
+    text-align: end;
+}
+
+.footer-content p strong {
+    font-weight: var(--semibold);
+    color: var(--primary);
+    font-size: 18px;
+    display: block;
+    margin-bottom: 10px;
 }
 
 /* ------------------------------------------------------ Responsiveness ------------------------------------------------------ */
