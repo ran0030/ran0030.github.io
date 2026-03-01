@@ -282,12 +282,13 @@ div.img-s:hover::after {
     display: flex;
     background-image: url(/sources/media/preload-bg-image.jpg);
     background-size: cover;
-    background-position: bottom right;
+    background-position: center right;
     filter: grayscale(0.3);
 }
 
 .videoContainer#metro-bg {
     background-image: url(/sources/media/preload-bg-image.jpg) !important;
+    background-position: center right;
 }
 
 .videoContainer#regional-bg {
