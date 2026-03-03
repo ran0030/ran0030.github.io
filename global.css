@@ -110,17 +110,17 @@ body {
 }
 
 .sectioncontainer .section .s-text-container .body-text a {
-    color: var(--text);
-    text-decoration: underline dotted var(--text) 1px;
+    color: var(--text-dark-blue);
+    text-decoration: underline dotted var(--text-dark-blue) 1px;
     font-weight: var(--medium);
 }
 
 .sectioncontainer .section .s-text-container .body-text a:hover {
-    color: var(--text-dark-blue);
+    color: var(--text);
 }
 
 .sectioncontainer .section .s-text-container .body-text a:active {
-    color: var(--text-dark-blue);
+    color: var(--text);
     opacity: 0.5;
 }
 
