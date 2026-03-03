@@ -1,0 +1,28 @@
+/* =========================
+   REGIONAL PAGE GRAPH SIZING
+   ========================= */
+
+/* Section 1 main line graph */
+.section.rs1 .graph-container img {
+    width: 700px;
+}
+
+/* Section 2 mode breakdown line graph */
+.section.rs2 .graph-text-container img {
+    width: 600px;
+}
+
+/* Section 4 box plot graph (optional sizing tweak) */
+.section.rs4 .graph-text-container img {
+    width: 650px;
+}
+
+/* Interactable monthly graphs – keep them consistent */
+.section.rs3 .monthly-graph-container {
+    width: 900px; /* adjust if you want larger/smaller */
+}
+
+.section.rs3 .monthly-graph-container img {
+    width: 100%;
+    height: auto;
+}

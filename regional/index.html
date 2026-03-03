@@ -27,6 +27,7 @@
 
         If you are on a mobile phone, rotate and zoom out the screen until this popup disappears.
     </div>
+
     <div class="navbar-container">
         <div class="navbar">
             <div class="logoSection" onclick="homeLink()">
@@ -43,11 +44,8 @@
     </div>
 
     <div class="heroSection">
-        <div class="blankSpace">
-
-        </div>
-        <div class="videoContainer" id="regional-bg">
-        </div>
+        <div class="blankSpace"></div>
+        <div class="videoContainer" id="regional-bg"></div>
         <div class="heroContent">
             <h1 style="margin-top: 25px;">
                 Regional Services:<br>
@@ -61,7 +59,205 @@
             </div>
         </div>
     </div>
+
+    <div class="sectioncontainer rsc1">
+        <div class="section rs1">
+            <div class="s-text-container">
+                <h3 class="pre-subheader">SECTION 1:</h3>
+                <div class="subheader th">Overview of Regional Transport</div>
+                <div class="body-text">
+                    <strong>Intro to the Data</strong>
+                    <br>
+                    This section analyses total regional public transport patronage in Victoria from 2018 to 2024. The
+                    data includes regional trains, regional coaches and regional buses operating across regional
+                    Victoria. By looking at total yearly patronage, we can see how usage patterns changed before, during
+                    and after COVID-19, and how regional trends compare with metropolitan Melbourne.
+                </div>
+            </div>
+
+            <div class="graph-container">
+                <img src="./media/s1-total-regional-line-graph.svg" alt="Total regional patronage line graph">
+            </div>
+
+            <div class="s-text-container">
+                <div class="body-text">
+                    <strong>Analysis</strong>
+                    <br>
+                    From 2018 to 2019, regional patronage remained relatively stable, reflecting consistent travel
+                    between regional centres and Melbourne as well as local movement within regional communities.
+                    However, in 2020 there was a clear decline. Regional patronage fell by approximately <strong>51.26%</strong>
+                    between 2019 and 2020, representing a decrease of <strong>over 18 million trips</strong>.
+                    <br><br>
+                    Although this decline was substantial, it was smaller than the metropolitan decrease. This suggests
+                    regional travel demand may have been less dependent on CBD commuting and more supported by essential
+                    travel needs, including work, services and longer-distance connections that are harder to replace.
+                    <br><br>
+                    From 2021 onwards, regional usage began to recover steadily. By 2024, regional patronage had not
+                    only recovered but exceeded pre-pandemic levels. This indicates stronger long-term recovery in
+                    regional Victoria compared to metropolitan Melbourne, potentially linked to changes in travel
+                    patterns and growth in regional demand.
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="sectioncontainer rsc2 sc-dark">
+        <div class="section rs2">
+            <div class="s-text-container">
+                <h3 class="pre-subheader">SECTION 2:</h3>
+                <div class="subheader th">Regional Mode Breakdown (Train vs Coach vs Bus)</div>
+            </div>
+
+            <div class="graph-text-container">
+                <img src="./media/s2-mode-regional-line-graph.svg" alt="Regional patronage by mode line graph">
+                <div class="body-text">
+                    <strong>Intro to the Data</strong>
+                    <br>
+                    This graph compares total yearly patronage for regional trains, regional coaches and regional buses
+                    from 2018 to 2024. Breaking the data down by mode helps identify which services carry the most
+                    passengers and how each mode was affected by COVID-19 disruptions and the recovery period.
+                </div>
+            </div>
+
+            <div class="s-text-container">
+                <div class="body-text">
+                    <strong>Analysis</strong>
+                    <br>
+                    Across the dataset, <strong>regional trains</strong> consistently record the highest patronage.
+                    This reflects the role of V/Line rail services in connecting large regional population centres to
+                    Melbourne and offering high capacity for longer-distance travel.
+                    <br><br>
+                    Regional buses also contribute a significant share of regional travel, while <strong>coaches</strong>
+                    generally record the lowest totals. This is expected due to lower service frequency, smaller
+                    passenger capacity and reduced demand outside major corridors.
+                    <br><br>
+                    During 2020 and 2021, all modes experienced declines. However, by 2024, the overall regional network
+                    shows strong recovery, with total patronage exceeding 2019 levels. This suggests regional transport
+                    demand returned more strongly than metropolitan services and may have grown beyond pre-pandemic
+                    patterns.
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="sectioncontainer rsc3">
+        <div class="section rs3">
+            <div class="s-text-container">
+                <h3 class="pre-subheader">SECTION 3:</h3>
+                <div class="subheader th">Monthly Trends and Seasonal Patterns</div>
+                <div class="body-text">
+                    <strong>Intro to the Data</strong>
+                    <br>
+                    This section explores monthly regional patronage trends for each year between 2018 and 2024. By
+                    breaking the data down into months instead of yearly totals, we can observe seasonal patterns,
+                    short-term fluctuations and the specific impacts of restriction periods more clearly.
+                </div>
+            </div>
+
+            <div class="graph-interactable-container">
+                <div class="monthly-graph-container">
+                    <img class="mImage active" data-year="2018" src="./media/monthly-interactable/2018.svg" alt="2018 Graph">
+                    <img class="mImage" data-year="2019" src="./media/monthly-interactable/2019.svg" alt="2019 Graph">
+                    <img class="mImage" data-year="2020" src="./media/monthly-interactable/2020.svg" alt="2020 Graph">
+                    <img class="mImage" data-year="2021" src="./media/monthly-interactable/2021.svg" alt="2021 Graph">
+                    <img class="mImage" data-year="2022" src="./media/monthly-interactable/2022.svg" alt="2022 Graph">
+                    <img class="mImage" data-year="2023" src="./media/monthly-interactable/2023.svg" alt="2023 Graph">
+                    <img class="mImage" data-year="2024" src="./media/monthly-interactable/2024.svg" alt="2024 Graph">
+                </div>
+
+                <div class="year-selector-container">
+                    Year:&nbsp;&nbsp;&nbsp;
+                    <p class="yearlink selected" data-target="2018">2018</p>
+                    <p class="yearlink" data-target="2019">2019</p>
+                    <p class="yearlink" data-target="2020">2020</p>
+                    <p class="yearlink" data-target="2021">2021</p>
+                    <p class="yearlink" data-target="2022">2022</p>
+                    <p class="yearlink" data-target="2023">2023</p>
+                    <p class="yearlink" data-target="2024">2024</p>
+                </div>
+            </div>
+
+            <div class="s-text-container">
+                <div class="body-text">
+                    <strong>Analysis</strong>
+                    <br>
+                    The monthly regional data shows seasonal variation in pre-pandemic years. Patronage generally
+                    fluctuates throughout the year, with quieter periods commonly occurring during holiday months and
+                    higher usage during regular school and work periods.
+                    <br><br>
+                    In 2018 and 2019, these patterns are relatively consistent, reflecting stable travel behaviour and
+                    predictable demand.
+                    <br><br>
+                    In contrast, 2020 and 2021 show far more irregular movement. Sharp dips occur during periods of
+                    stronger restrictions, with changes that are larger than typical seasonal variation. This
+                    demonstrates that COVID-19 disruptions strongly affected regional travel, even though the overall
+                    decline was less severe than the metropolitan dataset.
+                    <br><br>
+                    From 2022 onwards, the monthly trend becomes more stable again. By 2023 and 2024, the return of more
+                    predictable monthly patterns suggests recovery and stabilisation, supporting the broader increase
+                    seen in yearly totals.
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="sectioncontainer rsc4 sc-dark">
+        <div class="section rs4">
+            <div class="s-text-container">
+                <h3 class="pre-subheader">SECTION 4:</h3>
+                <div class="subheader th">Variability & Distribution Analysis</div>
+                <div class="body-text">
+                    <strong>Intro to the Data</strong>
+                    <br>
+                    This section looks at how consistent regional transport usage was across each year. Instead of just
+                    focusing on totals, it analyses the spread and distribution of monthly data to see how stable travel
+                    patterns were before, during and after the pandemic, using a Box Plot chart.
+                </div>
+            </div>
+
+            <div class="graph-text-container" style="margin-top: 40px;">
+                <img src="./media/s4-regional-box-plot-graph.svg" alt="Regional box plot graph">
+                <div class="s-text-container">
+                    <div class="body-text">
+                        <strong>Analysis</strong>
+                        <br>
+                        Regional transport shows relatively consistent monthly variability in 2018 and 2019. However, in
+                        2020 the distribution shifts downward, with a much lower median and a wider spread between
+                        months. This indicates reduced patronage and greater instability during the pandemic disruption
+                        period.
+                        <br><br>
+                        From 2021 onwards, the box plot gradually shifts upward, showing ongoing recovery. By 2024, the
+                        median monthly patronage rises to <strong>approximately 3.14 million</strong>, exceeding the
+                        2019 median. The distribution also becomes more stable again, suggesting regional travel
+                        patterns recovered strongly and returned to more consistent monthly demand.
+                        <br><br>
+                        Overall, the distribution analysis supports the trend observations, confirming that regional
+                        patronage experienced a significant COVID-era decline but recovered more fully than metropolitan
+                        transport by 2024.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <p><strong>Victoria Public Transport Usage Investigation</strong></p>
+            <div class="inner-fot-cont">
+                <div class="fot start">
+                    <p>Created by Shriman, Jap and Jehan</p>
+                    <p>John Monash Science School - 2026</p>
+                </div>
+                <div class="fot end">
+                    <p>Data sourced from the Victorian Government DataVic Portal</p>
+                    <p>© 2026 Student Investigation Project</p>
+                </div>
+            </div>
+        </div>
+    </footer>
 </body>
+
 <script src="/global.js" defer></script>
+<script src="./app.js" defer></script>
 
 </html>
