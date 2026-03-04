@@ -6,3 +6,7 @@
     width: 600px;
 }
 
+.section.ms.n3 .monthly-graph-container img {
+    width: 100%;
+    height: auto;
+}

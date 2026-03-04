@@ -397,6 +397,7 @@ div.img-s:hover::after {
     flex-direction: column;
     align-items: center;
     padding: 40px 0;
+    /* outline: solid 20px #E8ECF6; */
 }
 
 .footer-content {

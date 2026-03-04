@@ -84,3 +84,14 @@
     border-radius: 100px;
     border: solid 2px #08358a13;
 }
+
+
+
+
+.box-percent {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
