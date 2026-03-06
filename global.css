@@ -193,8 +193,18 @@ div.img-s:hover::after {
     border-radius: var(--border-radius);
     box-shadow: #00000025 0px 4px 25px;
     display: flex;
+    position: relative;
     padding: 0 25px;
+    transition: all 0.3s ease-in-out;
     justify-content: space-between;
+}
+
+.navbar.visible {
+    top: 0;
+}
+
+.navbar.invisible {
+    top: -100px;
 }
 
 .logoSection {

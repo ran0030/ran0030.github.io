@@ -23,3 +23,25 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 });
+
+let lastScroll = 0;
+const el = document.querySelector(".navbar");
+
+// set navbar active on page load
+el.classList.add("visible")
+
+window.addEventListener("scroll", () => {
+  const currentScroll = window.scrollY;
+
+  if (currentScroll > lastScroll) {
+    // Scrolling down
+    el.classList.add("invisible");
+    el.classList.remove("visible");
+  } else {
+    // Scrolling up
+    el.classList.add("visible");
+    el.classList.remove("invisible");
+  }
+
+  lastScroll = currentScroll;
+});
