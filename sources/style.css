@@ -304,6 +304,23 @@ div.img-s.s4 {
 div.img-s.s4::before {
     background-image: url(/sources/media/an-s4.jpg);
 }
+/* ------------------------------------------------------ Map ------------------------------------------------------ */
+
+.embedMap {
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+    padding-bottom: 75px;
+    width: 100%;
+    flex-direction: column;
+}
+
+.embedMap iframe {
+    border-radius: var(--border-radius);
+    box-shadow: 0 0 30px #00000005;
+
+}
+
 
 /* ------------------------------------------------------ References ------------------------------------------------------ */
 
