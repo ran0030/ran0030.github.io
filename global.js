@@ -1,5 +1,5 @@
 function homeLink() {
-    window.location.href='/'
+    window.location.href = '/'
 }
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -25,23 +25,51 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 let lastScroll = 0;
-const el = document.querySelector(".navbar");
+let scrollStart = 0;
 
-// set navbar active on page load
-el.classList.add("visible")
+const el = document.querySelector(".navbar");
+const threshold = 100;
+
+el.classList.add("visible");
 
 window.addEventListener("scroll", () => {
-  const currentScroll = window.scrollY;
+    const currentScroll = window.scrollY;
 
-  if (currentScroll > lastScroll) {
-    // Scrolling down
-    el.classList.add("invisible");
-    el.classList.remove("visible");
-  } else {
-    // Scrolling up
-    el.classList.add("visible");
-    el.classList.remove("invisible");
-  }
+    // scrolling down
+    if (currentScroll > lastScroll) {
 
-  lastScroll = currentScroll;
+        // start measuring when downward scroll begins
+        if (scrollStart === 0) {
+            scrollStart = lastScroll;
+        }
+
+        if (currentScroll - scrollStart > threshold) {
+            el.classList.add("invisible");
+            el.classList.remove("visible");
+        }
+
+    } else {
+        // scrolling up → show immediately
+        el.classList.add("visible");
+        el.classList.remove("invisible");
+
+        // reset the down-scroll tracker
+        scrollStart = 0;
+    }
+
+    lastScroll = currentScroll;
+});
+
+document.addEventListener("DOMContentLoaded", function() {
+    // Check if the browser is Safari
+    const isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
+    
+    if (isSafari) {
+        const element = document.getElementById("hero-vid");
+        if (element) {
+            element.disabled = true;
+            element.style.display = "none";
+            element.style.pointerEvents = "none";
+        }
+    }
 });

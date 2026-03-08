@@ -46,11 +46,20 @@
 .cardGridContainer {
     width: 100%;
     height: 100%;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    overflow: hidden;
+    position: relative;
 }
 
-.cardImgCont.compare .cardGridContainer {
+.cardGridContainer .inner {
+    width: 100%;
+    height: calc(100% - 1px);
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    overflow: hidden;
+    position: relative;
+}
+
+.cardImgCont.compare .cardGridContainer .inner {
     grid-template-rows: repeat(2, 1fr);
 }
 
@@ -59,6 +68,8 @@
     position: absolute;
     width: 100%;
     height: 100%;
+    pointer-events: none;
+    top: 0;
 }
 
 .cardImgCont.metro .cardGridContainer::after {
@@ -76,28 +87,42 @@
 .cardImage {
     width: 100%;
     height: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+.cardImage::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    transition: all 0.4s cubic-bezier(.17, .01, .11, .88);
 }
 
-.cardImage.train {
+.cardImage:hover::after {
+    transform: scale(109%);
+}
+
+.cardImage.train::after {
     background-image: url(./media/CardPhotos/train.png);
 }
 
-.cardImage.tram {
+.cardImage.tram::after {
     background-image: url(./media/CardPhotos/tram.png);
 }
 
-.cardImage.bus {
+.cardImage.bus::after {
     background-image: url(./media/CardPhotos/bus.png);
 }
 
-.cardImage.vline {
+.cardImage.vline::after {
     background-image: url(./media/CardPhotos/vline.png);
 }
 
-.cardImage.coach {
+.cardImage.coach::after {
     background-image: url(./media/CardPhotos/coach.png);
 }
 
@@ -304,15 +329,18 @@ div.img-s.s4 {
 div.img-s.s4::before {
     background-image: url(/sources/media/an-s4.jpg);
 }
+
 /* ------------------------------------------------------ Map ------------------------------------------------------ */
 
 .embedMap {
     display: flex;
     align-items: center;
-    justify-content: center; 
+    justify-content: center;
     padding-bottom: 75px;
     width: 100%;
     flex-direction: column;
+    background: linear-gradient(0deg, #E8ECF6 0%, #e8ecf600 64%);
+    padding: 60px 0;
 }
 
 .embedMap iframe {

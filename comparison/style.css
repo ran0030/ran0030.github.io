@@ -1,0 +1,7 @@
+.section.cs.n1 .graph-container img {
+    width: 700px;
+}
+
+.section.cs.n2 .graph-text-container img, .section.cs.n3 .graph-text-container img {
+    box-shadow: none !important;
+}

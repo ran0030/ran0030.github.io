@@ -49,11 +49,11 @@
 
         </div>
         <div class="videoContainer">
-            <video src="/sources/media/ptvblur2.mp4" loop autoplay muted playsinline webkit-playsinline
+            <video id="hero-vid" src="/sources/media/ptvblur2.mp4" loop autoplay muted playsinline webkit-playsinline
                 preload="auto"></video>
         </div>
         <div class="heroContent">
-            <h3><span><img src="/sources/media/investigation-icon.svg">Investigaton</span></h3>
+            <h3><span><img src="/sources/media/investigation-icon.svg">Investigation</span></h3>
             <h1 style="margin-top: 25px;">Public Transport usage in Victoria</h1>
             <h2 style="opacity: 60%; margin-bottom: 30px;">from 2018 - 2024</h2>
             <h4>Led by Shriman, Jap and Jehan</h4>
@@ -73,9 +73,11 @@
                 <div class="linkCardCont one">
                     <div class="cardImgCont metro">
                         <div class="cardGridContainer">
-                            <div class="cardImage train one"></div>
-                            <div class="cardImage tram two"></div>
-                            <div class="cardImage bus three"></div>
+                            <div class="inner">
+                                <div class="cardImage train one"></div>
+                                <div class="cardImage tram two"></div>
+                                <div class="cardImage bus three"></div>
+                            </div>
                         </div>
                     </div>
                     <div class="cardLinkText-cont">
@@ -92,9 +94,11 @@
                 <div class="linkCardCont two">
                     <div class="cardImgCont regional">
                         <div class="cardGridContainer">
-                            <div class="cardImage vline one"></div>
-                            <div class="cardImage coach two"></div>
-                            <div class="cardImage bus three"></div>
+                            <div class="inner">
+                                <div class="cardImage vline one"></div>
+                                <div class="cardImage coach two"></div>
+                                <div class="cardImage bus three"></div>
+                            </div>
                         </div>
                     </div>
                     <div class="cardLinkText-cont">
@@ -111,11 +115,13 @@
                 <div class="linkCardCont three">
                     <div class="cardImgCont compare">
                         <div class="cardGridContainer">
-                            <div class="cardImage train one"></div>
-                            <div class="cardImage tram two"></div>
-                            <div class="cardImage bus three"></div>
-                            <div class="cardImage vline four"></div>
-                            <div class="cardImage coach five"></div>
+                            <div class="inner">
+                                <div class="cardImage train one"></div>
+                                <div class="cardImage tram two"></div>
+                                <div class="cardImage bus three"></div>
+                                <div class="cardImage vline four"></div>
+                                <div class="cardImage coach five"></div>
+                            </div>
                         </div>
                     </div>
                     <div class="cardLinkText-cont">
@@ -209,10 +215,16 @@
             </div>
         </div>
     </div>
+    <div class="divider-container">
+        <div class="divider"></div>
+    </div>
     <div class="embedMap">
         <div class="subheader ch" style="margin-bottom: 20px;">Victorian Public Transport Network</div>
         <iframe title="Data viewer" width="900" height="500"
             src="https://experience.arcgis.com/experience/0e5362e2c4d144c3a785e2c60ceb972d/" frameBorder="0"></iframe>
+    </div>
+    <div class="divider-container sc-dark">
+        <div class="divider"></div>
     </div>
     <div class="sectioncontainer sc6 sc-dark">
         <div class="section s6">
